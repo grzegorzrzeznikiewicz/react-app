@@ -16,7 +16,6 @@ const initialState = {
             icon: 'gamepad',
         }
     ],
-
     cards: [
         { id: 1, columnId: 1, title: 'This is Going to Hurt' },
         { id: 2, columnId: 1, title: 'Interpreter of Maladies' },
@@ -24,8 +23,8 @@ const initialState = {
         { id: 4, columnId: 2, title: 'Star Wars' },
         { id: 5, columnId: 3, title: 'The Witcher' },
         { id: 6, columnId: 3, title: 'Skyrim' }
-    ]
-
+    ],
+    searchString: '',
 };
 
 export default initialState;
