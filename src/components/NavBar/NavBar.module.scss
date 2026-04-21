@@ -1,0 +1,47 @@
+@import '../../styles/settings.scss';
+
+.navBar {
+  background: darken($color-dark, 3%);
+  padding: $base-size ($base-size * 2);
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  font-size: 24px;
+  color: $color-light;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    color: $color-warning;
+  }
+}
+
+.list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-left: ($base-size * 2);
+  }
+
+  a {
+    color: $color-light;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: $transition;
+
+    &:hover {
+      color: $color-warning;
+    }
+  }
+}
