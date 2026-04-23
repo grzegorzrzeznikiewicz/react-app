@@ -43,5 +43,9 @@
     &:hover {
       color: $color-warning;
     }
+
+    &.linkActive {
+      color: $color-warning;
+    }
   }
 }

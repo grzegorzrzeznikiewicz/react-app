@@ -9,9 +9,12 @@ const NavBar = () => {
                     <i className="fa fa-tasks" />
                 </NavLink>
                 <ul className={styles.list}>
-                    <li><NavLink to="/">Home</NavLink></li>
-                    <li><NavLink to="/favorite">Favorite</NavLink></li>
-                    <li><NavLink to="/about">About</NavLink></li>
+                    <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined}
+                                 to="/">Home</NavLink></li>
+                    <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined}
+                                 to="/favorite">Favorite</NavLink></li>
+                    <li><NavLink className={({ isActive }) => isActive ? styles.linkActive : undefined}
+                                 to="/about">About</NavLink></li>
                 </ul>
             </div>
         </nav>
