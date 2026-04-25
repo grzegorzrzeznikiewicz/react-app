@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styles from './SearchForm.module.scss';
 import TextInput from '../TextInput/TextInput';
 import Button from '../Button/Button';
-import {updateSearchString} from "../../redux/store";
+import {updateSearchString, getSearchString} from "../../redux/store";
 
 const SearchForm = () => {
-    const [value, setValue] = useState('');
+    const searchString = useSelector(getSearchString);
+    const [value, setValue] = useState(searchString);
     const dispatch = useDispatch();
 
     const handleSubmit = (e) => {

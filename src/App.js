@@ -4,18 +4,20 @@ import Container from "./components/Container/Container";
 import Favorite from "./components/Favorite/Favorite";
 import About from "./components/About/About";
 import NoMatch from "./components/NoMatch/NoMatch";
-import { Routes, Route } from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
+import List from "./components/List/List";
 
 const App = () => {
     return (
         <main>
-            <NavBar />
+            <NavBar/>
             <Container>
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/favorite" element={<Favorite />} />
-                    <Route path="*" element={<NoMatch />} />
+                    <Route path="/" element={<Home/>}/>
+                    <Route path="/about" element={<About/>}/>
+                    <Route path="/favorite" element={<Favorite/>}/>
+                    <Route path="/list/:listId" element={<List/>}/>
+                    <Route path="*" element={<NoMatch/>}/>
                 </Routes>
             </Container>
         </main>
