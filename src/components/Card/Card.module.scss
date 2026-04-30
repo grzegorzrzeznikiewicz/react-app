@@ -12,6 +12,11 @@
   font-weight: bold;
 }
 
+.buttons {
+  display: flex;
+  gap: $base-size / 2;
+}
+
 .button {
   background: transparent;
   border: none;
