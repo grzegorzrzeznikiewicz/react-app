@@ -5,22 +5,22 @@ import {useDispatch} from "react-redux";
 import {addList} from "../../redux/listsRedux";
 import TextInput from "../TextInput/TextInput";
 
-const ListForm = props => {
+const ListForm = () => {
     const [title, setTitle] = useState('');
-    const [icon, setIcon] = useState('');
+    const [description, setDescription] = useState('');
     const dispatch = useDispatch();
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(addList({title, icon, listId: props.listId}));
+        dispatch(addList({title, description}));
         setTitle('');
-        setIcon('');
+        setDescription('');
     };
 
     return (
         <form className={styles.listForm} onSubmit={handleSubmit}>
             <label>Title: <TextInput value={title} onChange={e => setTitle(e.target.value)}/></label>
-            <label>Icon: <TextInput value={icon} onChange={e => setIcon(e.target.value)}/></label>
+            <label>Description: <TextInput value={description} onChange={e => setDescription(e.target.value)}/></label>
             <Button>
                 Add list
             </Button>
